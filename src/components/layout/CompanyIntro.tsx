@@ -7,7 +7,7 @@ import { CheckCircle2 } from 'lucide-react';
 
 export const CompanyIntro = () => {
     return (
-        <section className="py-24 px-6 relative overflow-hidden bg-background" id="about">
+        <section className="pt-24 pb-32 px-6 relative bg-background" id="about">
             <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
                 <div className="w-full md:w-1/2">
                     <motion.div
@@ -28,9 +28,9 @@ export const CompanyIntro = () => {
                                 <span className="text-white/30 text-8xl md:text-[120px] font-black uppercase select-none">LUXE</span>
                             </div>
                         </div>
-                        <div className="absolute -bottom-8 -right-8 p-8 glass rounded-2xl hidden lg:block">
-                            <span className="text-5xl font-black text-primary block mb-1">30+</span>
-                            <span className="text-xs text-muted-foreground uppercase font-bold tracking-widest">Years of Excellence</span>
+                        <div className="absolute -bottom-6 -right-6 md:-bottom-8 md:-right-8 p-6 md:p-8 glass rounded-2xl z-20">
+                            <span className="text-4xl md:text-5xl font-black text-primary block mb-1">30+</span>
+                            <span className="text-[10px] md:text-xs text-muted-foreground uppercase font-bold tracking-widest">Years of Excellence</span>
                         </div>
                     </motion.div>
                 </div>
