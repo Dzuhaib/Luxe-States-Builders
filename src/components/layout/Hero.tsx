@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { Scene } from '../3d/Scene';
 import { Button } from '@/components/ui';
 import { ArrowRight, Phone } from 'lucide-react';
@@ -52,9 +53,11 @@ export const Hero = () => {
                     </div>
 
                     <div className="flex flex-col md:flex-row items-center justify-center gap-4 w-full max-w-xl px-4">
-                        <Button size="md" className="h-14 md:h-16 px-8 rounded-xl text-lg font-black w-full md:flex-1 shadow-xl hover:scale-105 transition-transform">
-                            View Apartments
-                        </Button>
+                        <Link href="/apartments" className="flex-1 w-full">
+                            <Button size="md" className="h-14 md:h-16 px-8 rounded-xl text-lg font-black w-full shadow-xl hover:scale-105 transition-transform">
+                                View Apartments
+                            </Button>
+                        </Link>
                         <a
                             href="https://wa.me/923063213951?text=I%20am%20interested%20in%20your%20apartment"
                             target="_blank"
