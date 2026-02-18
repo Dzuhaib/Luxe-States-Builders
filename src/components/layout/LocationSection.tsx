@@ -29,7 +29,8 @@ export const LocationSection = () => {
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.5714488!2d67.07!3d24.8!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33c5e80000001%3A0x4a00000000000000!2sDHA%20Phase%208%20Karachi!5e0!3m2!1sen!2spk!4v1700000000006"
                             width="100%"
                             height="100%"
-                            style={{ border: 0, filter: 'grayscale(1) invert(0.9) contrast(1.2)' }}
+                            style={{ border: 0 }}
+                            className="opacity-80 lg:contrast-[1.1] lg:brightness-[0.9] lg:grayscale-[0.5]"
                             allowFullScreen
                             loading="lazy"
                         />

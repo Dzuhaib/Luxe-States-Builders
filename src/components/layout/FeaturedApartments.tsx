@@ -45,9 +45,9 @@ export const FeaturedApartments = () => {
                                         src={apt.imageUrl}
                                         alt={apt.name}
                                         fill
-                                        className="object-cover group-hover:scale-110 transition-transform duration-700 opacity-60 group-hover:opacity-100"
+                                        className="object-cover lg:group-hover:scale-110 transition-transform duration-700 opacity-60 group-hover:opacity-100 transform-gpu will-change-transform"
                                     />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent z-10" />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent z-10 pointer-events-none" />
                                     <div className="absolute top-4 left-4 z-20">
                                         <span className="bg-primary text-primary-foreground text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">
                                             {apt.tier}
@@ -77,15 +77,15 @@ export const FeaturedApartments = () => {
 
                                     <div className="mt-auto flex gap-4">
                                         <Link href={`/apartments/${apt.slug}`} className="flex-1">
-                                            <Button variant="glass" className="w-full">Details</Button>
+                                            <Button variant="glass" className="w-full h-12">Details</Button>
                                         </Link>
                                         <a
                                             href={`https://wa.me/923063213951?text=I%20am%20interested%20in%20${apt.name}`}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="p-3 bg-primary text-primary-foreground rounded-full hover:bg-accent transition-all"
+                                            className="p-3 bg-primary text-primary-foreground rounded-full hover:bg-accent transition-all transform-gpu will-change-transform active:scale-90"
                                         >
-                                            <ArrowRight className="w-4 h-4" />
+                                            <ArrowRight className="w-5 h-5" />
                                         </a>
                                     </div>
                                 </div>

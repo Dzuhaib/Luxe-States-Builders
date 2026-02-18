@@ -30,7 +30,7 @@ export const Button = ({
     return (
         <button
             className={cn(
-                'inline-flex items-center justify-center rounded-full font-semibold transition-all duration-300 active:scale-95 disabled:opacity-50',
+                'inline-flex items-center justify-center rounded-full font-semibold transition-all duration-300 active:scale-95 disabled:opacity-50 transform-gpu will-change-transform',
                 variants[variant],
                 sizes[size],
                 className
@@ -48,8 +48,8 @@ export const Card = ({ className, hoverEffect = true, ...props }: CardProps) => 
     return (
         <div
             className={cn(
-                'glass rounded-3xl overflow-hidden transition-all duration-500',
-                hoverEffect && 'hover:translate-y-[-8px] hover:shadow-2xl hover:shadow-primary/10 hover:border-primary/30',
+                'glass rounded-3xl overflow-hidden transition-all duration-500 transform-gpu will-change-transform',
+                hoverEffect && 'lg:hover:translate-y-[-8px] lg:hover:shadow-2xl lg:hover:shadow-primary/10 lg:hover:border-primary/30',
                 className
             )}
             {...props}
