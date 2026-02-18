@@ -21,11 +21,13 @@ export default function Home() {
         <CompanyIntro />
         <InstallmentPlan />
         <FeaturedApartments />
-        <ScrollVelocity
-          texts={['HIGH ROI GUARANTEED', 'LUXURY REDEFINED']}
-          velocity={60}
-          className="text-white mt-12 font-black uppercase opacity-70"
-        />
+        <div className="mt-12">
+          <ScrollVelocity
+            texts={['HIGH ROI GUARANTEED', 'LUXURY REDEFINED']}
+            velocity={60}
+            className="text-white font-black uppercase opacity-70"
+          />
+        </div>
         <InstallmentCalculator />
         <WhyChooseUs />
         <LocationSection />

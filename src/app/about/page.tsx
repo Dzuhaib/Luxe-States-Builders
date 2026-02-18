@@ -162,11 +162,13 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            <ScrollVelocity
-                texts={['ARCHITECTURAL MASTERPIECES', 'KARACHI\'S FINEST LIVING']}
-                velocity={50}
-                className="text-white mt-12 font-black uppercase tracking-tighter opacity-70"
-            />
+            <div className="mt-12">
+                <ScrollVelocity
+                    texts={['ARCHITECTURAL MASTERPIECES', 'KARACHI\'S FINEST LIVING']}
+                    velocity={50}
+                    className="text-white font-black uppercase opacity-70"
+                />
+            </div>
 
             {/* CTA */}
             <section className="py-24 px-6 bg-secondary/30 relative overflow-hidden">
