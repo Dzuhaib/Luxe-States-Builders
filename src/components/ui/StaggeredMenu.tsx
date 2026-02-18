@@ -489,8 +489,8 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
 .sm-scope .sm-icon { position: relative; width: 24px; height: 24px; flex: 0 0 24px; display: inline-flex; align-items: center; justify-content: center; will-change: transform; transition: color 0.3s ease; }
 .sm-scope .sm-panel-itemWrap { position: relative; overflow: hidden; line-height: 1; }
 .sm-scope .sm-icon-line { position: absolute; left: 50%; top: 50%; width: 100%; height: 2.5px; background: currentColor; border-radius: 2px; transform: translate(-50%, -50%); will-change: transform; }
-.sm-scope .staggered-menu-panel { position: absolute; top: 0; right: 0; width: 100%; height: 100%; background: white; display: flex; flex-direction: column; padding: 6em 2em 2em 2em; overflow-y: auto; z-index: 10; }
-@media (min-width: 1024px) { .sm-scope .staggered-menu-panel { width: clamp(350px, 40vw, 500px); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); } }
+.sm-scope .staggered-menu-panel { position: absolute; top: 0; right: 0; width: 100%; height: 100%; background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); display: flex; flex-direction: column; padding: 6em 2em 2em 2em; overflow-y: auto; z-index: 10; }
+@media (min-width: 1024px) { .sm-scope .staggered-menu-panel { width: clamp(350px, 40vw, 500px); } }
 .sm-scope [data-position='left'] .staggered-menu-panel { right: auto; left: 0; }
 .sm-scope .sm-prelayers { position: absolute; top: 0; right: 0; bottom: 0; width: 100%; pointer-events: none; z-index: 5; }
 @media (min-width: 1024px) { .sm-scope .sm-prelayers { width: clamp(350px, 40vw, 500px); } }
