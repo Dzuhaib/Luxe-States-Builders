@@ -103,7 +103,7 @@ export default function AboutPage() {
             <ScrollVelocity
                 texts={['ETERNAL TRUST', 'UNCOMPROMISED QUALITY']}
                 velocity={40}
-                className="text-white italic font-black uppercase tracking-tighter opacity-50 mb-12"
+                className="text-white italic font-black uppercase tracking-tighter opacity-70"
             />
 
             {/* Content Section */}
@@ -165,7 +165,7 @@ export default function AboutPage() {
             <ScrollVelocity
                 texts={['ARCHITECTURAL MASTERPIECES', 'KARACHI\'S FINEST LIVING']}
                 velocity={50}
-                className="text-white font-black uppercase tracking-widest opacity-50 mt-12 mb-24"
+                className="text-white mt-12 font-black uppercase tracking-tighter opacity-70"
             />
 
             {/* CTA */}
