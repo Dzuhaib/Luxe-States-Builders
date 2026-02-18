@@ -16,7 +16,7 @@ export default function Home() {
         <ScrollVelocity
           texts={['EXCLUSIVE OFFERS', '0% INTEREST FOREVER']}
           velocity={50}
-          className="text-white/10 italic font-black uppercase tracking-tighter"
+          className="text-white italic font-black uppercase tracking-tighter opacity-70"
         />
         <CompanyIntro />
         <InstallmentPlan />
@@ -24,7 +24,7 @@ export default function Home() {
         <ScrollVelocity
           texts={['HIGH ROI GUARANTEED', 'LUXURY REDEFINED']}
           velocity={60}
-          className="text-white opacity-20 mt-12 font-black uppercase"
+          className="text-white mt-12 font-black uppercase opacity-70"
         />
         <InstallmentCalculator />
         <WhyChooseUs />
