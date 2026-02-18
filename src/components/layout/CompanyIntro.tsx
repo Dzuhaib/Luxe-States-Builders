@@ -4,6 +4,8 @@ import React from 'react';
 import NextImage from 'next/image';
 import { motion } from 'framer-motion';
 import { CheckCircle2 } from 'lucide-react';
+import Link from 'next/link';
+import { Button } from '@/components/ui';
 
 export const CompanyIntro = () => {
     return (
@@ -45,7 +47,7 @@ export const CompanyIntro = () => {
                     <p className="text-muted-foreground leading-relaxed mb-8 text-lg">
                         At Luxe Estates, we believe that luxury should be accessible. For over three decades, we've been crafting architectural marvels that redefine urban living in Pakistan. Our commitment to quality and flexible financing makes us the preferred choice for modern homeowners.
                     </p>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
                         {[
                             'Premium Materials',
                             'Timely Delivery',
@@ -60,6 +62,18 @@ export const CompanyIntro = () => {
                             </div>
                         ))}
                     </div>
+                    <Link href="/about">
+                        <Button variant="outline" className="h-14 px-8 rounded-xl font-bold group">
+                            LEARN OUR STORY
+                            <motion.span
+                                animate={{ x: [0, 5, 0] }}
+                                transition={{ repeat: Infinity, duration: 1.5 }}
+                                className="inline-block ml-2"
+                            >
+                                →
+                            </motion.span>
+                        </Button>
+                    </Link>
                 </div>
             </div>
         </section>

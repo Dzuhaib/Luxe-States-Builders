@@ -11,15 +11,15 @@ import { StaggeredMenu, StaggeredMenuItem, StaggeredMenuSocialItem } from '../ui
 const navLinks = [
     { name: 'Home', href: '/' },
     { name: 'Apartments', href: '/apartments' },
-    { name: 'About', href: '#about' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'About', href: '/about' },
+    { name: 'Contact', href: '/contact' },
 ];
 
 const mobileMenuItems: StaggeredMenuItem[] = [
     { label: 'Home', ariaLabel: 'Home', link: '/' },
     { label: 'Apartments', ariaLabel: 'Apartments', link: '/apartments' },
-    { label: 'About', ariaLabel: 'About Us', link: '#about' },
-    { label: 'Contact', ariaLabel: 'Contact Us', link: '#contact' },
+    { label: 'About', ariaLabel: 'About Us', link: '/about' },
+    { label: 'Contact', ariaLabel: 'Contact Us', link: '/contact' },
 ];
 
 const socialItems: StaggeredMenuSocialItem[] = [
