@@ -8,7 +8,8 @@ import { ArrowRight, Phone } from 'lucide-react';
 
 export const Hero = () => {
     return (
-        <section className="relative w-full h-screen bg-background overflow-hidden flex items-center justify-center">
+        <section className="relative w-full h-[100dvh] bg-background overflow-hidden flex items-center justify-center">
+            {/* Version 1.1 - Viewport Fit Refinement */}
             {/* 3D Background */}
             <div className="absolute inset-0 z-0 opacity-80 pointer-events-none">
                 <Scene />
