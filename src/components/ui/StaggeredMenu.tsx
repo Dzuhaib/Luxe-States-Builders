@@ -60,6 +60,8 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
     const plusVRef = useRef<HTMLSpanElement | null>(null);
     const iconRef = useRef<HTMLSpanElement | null>(null);
 
+    const openTlRef = useRef<gsap.core.Timeline | null>(null);
+    const closeTweenRef = useRef<gsap.core.Tween | null>(null);
     const spinTweenRef = useRef<gsap.core.Timeline | null>(null);
     const colorTweenRef = useRef<gsap.core.Tween | null>(null);
 
@@ -76,9 +78,8 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
             const plusH = plusHRef.current;
             const plusV = plusVRef.current;
             const icon = iconRef.current;
-            const textInner = textInnerRef.current;
 
-            if (!panel || !plusH || !plusV || !icon || !textInner) return;
+            if (!panel || !plusH || !plusV || !icon) return;
 
             let preLayers: HTMLElement[] = [];
             if (preContainer) {
