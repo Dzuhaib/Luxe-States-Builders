@@ -6,6 +6,8 @@ import { ShieldCheck, Award, Users, Building2, TrendingUp, Heart } from 'lucide-
 import { Button } from '@/components/ui';
 import Link from 'next/link';
 
+import { ScrollVelocity } from '@/components/ui/ScrollVelocity';
+
 const stats = [
     { label: 'Managed Projects', value: '50+', icon: Building2 },
     { label: 'Happy Families', value: '2,500+', icon: Users },
@@ -98,6 +100,12 @@ export default function AboutPage() {
                 </div>
             </section>
 
+            <ScrollVelocity
+                texts={['ETERNAL TRUST', 'UNCOMPROMISED QUALITY']}
+                velocity={40}
+                className="text-white italic font-black uppercase tracking-tighter opacity-50 mb-12"
+            />
+
             {/* Content Section */}
             <section className="py-24 px-6 overflow-hidden">
                 <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
@@ -138,8 +146,8 @@ export default function AboutPage() {
                     >
                         <div className="relative aspect-square rounded-[40px] overflow-hidden border border-primary/20">
                             <img
-                                src="https://images.unsplash.com/photo-1545324418-f1d3c5b53571?q=80&w=1935&auto=format&fit=crop"
-                                alt="Construction Project"
+                                src="https://images.unsplash.com/photo-1574362848149-11496d93a7c7?q=80&w=1984&auto=format&fit=crop"
+                                alt="Luxury Architectural Development"
                                 className="w-full h-full object-cover scale-110 hover:scale-100 transition-transform duration-700"
                             />
                             <div className="absolute inset-0 bg-primary/20 mix-blend-overlay" />
@@ -153,6 +161,12 @@ export default function AboutPage() {
                     </motion.div>
                 </div>
             </section>
+
+            <ScrollVelocity
+                texts={['ARCHITECTURAL MASTERPIECES', 'KARACHI\'S FINEST LIVING']}
+                velocity={50}
+                className="text-white font-black uppercase tracking-widest opacity-50 mt-12 mb-24"
+            />
 
             {/* CTA */}
             <section className="py-24 px-6 bg-secondary/30 relative overflow-hidden">
