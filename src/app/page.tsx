@@ -14,17 +14,17 @@ export default function Home() {
       <Hero />
       <div className="relative z-10 space-y-0">
         <ScrollVelocity
-          texts={['LIMITED UNITS REMAINING', 'EXCLUSIVE OFFERS', '0% INTEREST FOREVER', 'GOVERNMENT APPROVED']}
+          texts={['EXCLUSIVE OFFERS', '0% INTEREST FOREVER']}
           velocity={50}
-          className="text-primary/10 italic font-black uppercase tracking-tighter"
+          className="text-white/10 italic font-black uppercase tracking-tighter"
         />
         <CompanyIntro />
         <InstallmentPlan />
         <FeaturedApartments />
         <ScrollVelocity
-          texts={['PRIME DHA PH-8 LOCATIONS', 'INSTANT POSSESSION', 'HIGH ROI GUARANTEED', 'LUXURY REDEFINED']}
+          texts={['HIGH ROI GUARANTEED', 'LUXURY REDEFINED']}
           velocity={60}
-          className="text-primary opacity-20 mt-12 font-black uppercase"
+          className="text-white opacity-20 mt-12 font-black uppercase"
         />
         <InstallmentCalculator />
         <WhyChooseUs />
