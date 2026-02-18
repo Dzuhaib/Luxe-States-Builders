@@ -35,7 +35,7 @@
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
   --color-border: var(--border);
-  
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 
@@ -43,12 +43,25 @@
   --animate-shine: shine 2s linear infinite;
 
   @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-10px);
+    }
   }
+
   @keyframes shine {
-    from { background-position: 200% 0; }
-    to { background-position: -200% 0; }
+    from {
+      background-position: 200% 0;
+    }
+
+    to {
+      background-position: -200% 0;
+    }
   }
 }
 
@@ -61,10 +74,26 @@ body {
 }
 
 .glass {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  /* Hardware acceleration */
+  transform: translateZ(0);
+}
+
+@media (min-width: 1024px) {
+  .glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+}
+
+/* Fallback for mobile/low performance */
+@media (max-width: 1023px) {
+  .glass {
+    background: rgba(15, 23, 42, 0.8);
+    /* Solid dark blue-ish for contrast */
+  }
 }
 
 .gold-gradient {
@@ -76,4 +105,3 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
