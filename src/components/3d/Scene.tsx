@@ -61,9 +61,13 @@ const ApartmentLevel = ({ position }: { position: [number, number, number] }) =>
 
 const Building = () => {
     const meshRef = useRef<THREE.Group>(null);
-    const levels = useMemo(() => Array.from({ length: 6 }).map((_, i) => (
-        <ApartmentLevel key={i} position={[0, i * 1 + 0.5, 0]} />
-    )), []);
+    const levels = useMemo(() => {
+        const isMobile = typeof window !== 'undefined' ? window.innerWidth < 768 : false;
+        const count = isMobile ? 3 : 6;
+        return Array.from({ length: count }).map((_, i) => (
+            <ApartmentLevel key={i} position={[0, i * 1 + 0.5, 0]} />
+        ));
+    }, []);
 
     useFrame((state) => {
         if (meshRef.current) {
@@ -98,11 +102,19 @@ const Building = () => {
 };
 
 export const Scene = () => {
+    const isMobile = typeof window !== 'undefined' ? window.innerWidth < 768 : false;
+
     return (
         <Canvas
             shadows={false}
-            dpr={[1, 1.5]}
-            gl={{ antialias: false, powerPreference: 'high-performance' }}
+            dpr={isMobile ? [1, 1] : [1, 1.5]}
+            gl={{
+                antialias: false,
+                powerPreference: 'high-performance',
+                alpha: true,
+                preserveDrawingBuffer: false
+            }}
+            style={{ pointerEvents: 'none' }}
         >
             <PerspectiveCamera makeDefault position={[0, 4, 12]} fov={45} />
             <fog attach="fog" args={['#020817', 5, 25]} />
@@ -114,7 +126,7 @@ export const Scene = () => {
             <Environment preset="city" />
 
             <group position={[0, -1, 0]}>
-                <Float speed={1} rotationIntensity={0.1} floatIntensity={0.2}>
+                <Float speed={isMobile ? 0.5 : 1} rotationIntensity={0.1} floatIntensity={0.2}>
                     <Building />
                 </Float>
 
@@ -123,16 +135,18 @@ export const Scene = () => {
                     <meshStandardMaterial color="#050505" />
                 </mesh>
 
-                <gridHelper args={[100, 40, '#1e293b', '#0a0a0a']} position={[0, -1.99, 0]} />
+                <gridHelper args={[100, isMobile ? 20 : 40, '#1e293b', '#0a0a0a']} position={[0, -1.99, 0]} />
             </group>
 
-            <ContactShadows
-                position={[0, -2.9, 0]}
-                opacity={0.4}
-                scale={20}
-                blur={2.5}
-                far={10}
-            />
+            {!isMobile && (
+                <ContactShadows
+                    position={[0, -2.9, 0]}
+                    opacity={0.4}
+                    scale={20}
+                    blur={2.5}
+                    far={10}
+                />
+            )}
         </Canvas>
     );
 };

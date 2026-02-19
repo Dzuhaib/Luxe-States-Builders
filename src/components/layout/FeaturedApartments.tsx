@@ -75,15 +75,20 @@ export const FeaturedApartments = () => {
                                         </div>
                                     </div>
 
-                                    <div className="mt-auto flex gap-4">
-                                        <Link href={`/apartments/${apt.slug}`} className="flex-1">
-                                            <Button variant="glass" className="w-full h-12">Details</Button>
-                                        </Link>
+                                    <div className="mt-auto flex gap-4 items-center relative z-30">
+                                        <Button
+                                            as={Link}
+                                            href={`/apartments/${apt.slug}`}
+                                            variant="glass"
+                                            className="flex-1 h-12 no-underline"
+                                        >
+                                            Details
+                                        </Button>
                                         <a
                                             href={`https://wa.me/923063213951?text=I%20am%20interested%20in%20${apt.name}`}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="p-3 bg-primary text-primary-foreground rounded-full hover:bg-accent transition-all transform-gpu will-change-transform active:scale-90"
+                                            className="w-12 h-12 flex items-center justify-center bg-primary text-primary-foreground rounded-full hover:bg-accent transition-all transform-gpu will-change-transform active:scale-90 shadow-lg shadow-primary/20 shrink-0"
                                         >
                                             <ArrowRight className="w-5 h-5" />
                                         </a>

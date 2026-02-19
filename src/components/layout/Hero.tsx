@@ -52,23 +52,26 @@ export const Hero = () => {
                         ))}
                     </div>
 
-                    <div className="flex flex-col md:flex-row items-center justify-center gap-4 w-full max-w-xl px-4">
-                        <Link href="/apartments" className="flex-1 w-full">
-                            <Button size="md" className="h-14 md:h-16 px-8 rounded-xl text-lg font-black w-full shadow-xl hover:scale-105 transition-transform">
-                                View Apartments
-                            </Button>
-                        </Link>
-                        <a
+                    <div className="flex flex-col md:flex-row items-center justify-center gap-4 w-full max-w-xl px-4 relative z-20">
+                        <Button
+                            as={Link}
+                            href="/apartments"
+                            size="md"
+                            className="h-14 md:h-16 px-8 rounded-xl text-lg font-black w-full shadow-xl hover:scale-105 transition-transform no-underline"
+                        >
+                            View Apartments
+                        </Button>
+                        <Button
+                            as="a"
                             href="https://wa.me/923063213951?text=I%20am%20interested%20in%20your%20apartment"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex-1 w-full"
+                            variant="glass"
+                            className="h-14 md:h-16 px-8 rounded-xl text-lg font-black w-full text-foreground border-white/10 flex items-center justify-center gap-3 hover:bg-white/10 transition-colors no-underline"
                         >
-                            <Button variant="glass" className="h-14 md:h-16 px-8 rounded-xl text-lg font-black w-full text-foreground border-white/10 flex items-center justify-center gap-3 hover:bg-white/10 transition-colors">
-                                <Phone className="w-5 h-5 text-primary" />
-                                Book Now
-                            </Button>
-                        </a>
+                            <Phone className="w-5 h-5 text-primary" />
+                            Book Now
+                        </Button>
                     </div>
                 </motion.div>
             </div>

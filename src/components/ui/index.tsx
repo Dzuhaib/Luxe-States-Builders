@@ -6,12 +6,17 @@ import { cn } from '@/lib/utils';
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     variant?: 'primary' | 'outline' | 'ghost' | 'glass';
     size?: 'sm' | 'md' | 'lg';
+    as?: any;
+    href?: string;
+    target?: string;
+    rel?: string;
 }
 
 export const Button = ({
     className,
     variant = 'primary',
     size = 'md',
+    as: Component = 'button',
     ...props
 }: ButtonProps) => {
     const variants = {
@@ -28,9 +33,9 @@ export const Button = ({
     };
 
     return (
-        <button
+        <Component
             className={cn(
-                'inline-flex items-center justify-center rounded-full font-semibold transition-all duration-300 active:scale-95 disabled:opacity-50 transform-gpu will-change-transform',
+                'inline-flex items-center justify-center rounded-full font-semibold transition-all duration-300 active:scale-95 disabled:opacity-50 transform-gpu will-change-transform cursor-pointer select-none touch-manipulation',
                 variants[variant],
                 sizes[size],
                 className
